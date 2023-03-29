@@ -29,6 +29,7 @@ Codes provided in the University of Adelaide Full-Stack Development bootcamp (co
 Additional code & general references include the following:
 - 'Random Password Generator using Javascript' by Foolish Developer: <https://dev.to/code_mystery/random-password-generator-using-javascript-6a>
 - 'Var, Let, and Const – What's the Difference?' by freeCodeCamp: <https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/>
+- 'Window confirm()' by W3 Schools: <https://www.w3schools.com/jsref/met_win_confirm.asp>
 
 
 ## License

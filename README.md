@@ -15,12 +15,14 @@ This project was also for my personal learning to consolidate my knowledge on ba
 ## Usage
 
 ![Screenshot of the generator in use](Develop/Assets/landing.png)
+
 The screenshot above demonstrates the generator in use.
 
 How to use:
 Click on the 'generate' button to initiate the password generation process.
 
 ![Prompt for user entry in the generator](Develop/Assets/entry.png)
+
 Please enter the required information as requested by the prompt in the entry field.
 1) Enter the length of password desired between 8 to 128 characters (in numbers)
 2) Click 'ok' for at least one character type when prompted. There are four different types (lower case, upper case, numbers, special characters)
@@ -28,6 +30,7 @@ Please enter the required information as requested by the prompt in the entry fi
 
 Troubleshooting:
 ![Error message prompt from incorrect user entry in the generator prompt](Develop/Assets/error.png)
+
 If characters other than requested is entered in the prompt (or left empty), or if no characters are selected in the follow-up prompts, the generator will return an error.
 
 Please click on the 'generate' button to try again.

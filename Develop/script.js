@@ -22,19 +22,21 @@ function generatePassword() {
   // Ask user for their choice
   var userLength = window.prompt("Select your password length (by entering a number between 8-128 characters)");
 
-  // If user pressed Cancel or entered non-numerical characters, end function
+  // Input validation - If user pressed Cancel or entered non-numerical characters, end function
   if (userLength < 8 || userLength > 128 || !userLength) {
-    alert("Please ensure your chosen length within 8-168 characters - click on the button again to restart.");
+    alert("Please ensure your chosen length within 8-168 characters. \nClick on the 'Generate' button again to restart.");
     return;
   };
 
   if (isNaN(userLength)) {
-    alert("Please enter a numerical character - click on the button again to restart.");
+    alert("Please enter a numerical character. \nClick on the 'Generate' button again to restart.");
     return;
   }
 
   // console log for debugging
   console.log("User's chosen password length = " + userLength);
+
+  alert("Please select at least ONE of the following of additional character types to be included in the next prompts.")
 
   // Series of confirm (ok/cancel) prompts to gather user choices
   let userLowerCase = window.confirm("Would you like to include lower case characters?");
@@ -63,6 +65,12 @@ function generatePassword() {
     console.log("special characters selected");
   }
 
+  // if none of the above four options are selected - cancel the generation process (weak password)
+  if (!userLowerCase && !userUpperCase && !userNumbers && !userSpecial) {
+    alert("Please select at least one additional character type. \nClick on the 'Generate' button again to restart.");
+    return;
+  }
+
   // use for loop to randomise a password, using the array generated above
     // New variable (string) for temporary storage of randomly generated password
   let userChoiceRandom = "";
@@ -71,19 +79,8 @@ function generatePassword() {
     userChoiceRandom += userChoice[Math.floor(Math.random() * userChoice.length)];
   }
 
-  // validation check to see if all selected characters have been included
-
-  while(userChoiceRandom){
-    if (userLowerCase){}
-    if (userUpperCase){}
-    if (userNumbers){}
-    if(userSpecial){}
-
-  }
-
   return userChoiceRandom;
-
-};
+}
 
 // Write password to the #password input
 function writePassword() {

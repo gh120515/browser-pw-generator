@@ -3,24 +3,34 @@
 
 ## Description
 
-This browser-based password generator will allow you to generate a strong password for your convinience.
+This browser-based password generator will allow you to generate a strong password (at least 8 characters in length and at least two types of characters) for your convinience.
 
 Following options are available with this generator:
 - length of the password (8-128 characters)
 - character types (case, numeric, special characters)
 
-This project was also for my personal learning to consolidate my knowledge on basic JavaScript concepts, incorporating with HTML and CSS.
+This project was also for my personal learning to consolidate my knowledge on basic JavaScript concepts, incorporating with HTML and CSS. It was especially useful in testing my skills on correctly defining and executing functions.
 
 
 ## Usage
 
-<!-- Provide instructions and examples for use. Include screenshots as needed.
+![Screenshot of the generator in use](Develop/Assets/landing.png)
+The screenshot above demonstrates the generator in use.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+How to use:
+Click on the 'generate' button to initiate the password generation process.
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ``` -->
+![Prompt for user entry in the generator](Develop/Assets/entry.png)
+Please enter the required information as requested by the prompt in the entry field.
+1) Enter the length of password desired between 8 to 128 characters (in numbers)
+2) Click 'ok' for at least one character type when prompted. There are four different types (lower case, upper case, numbers, special characters)
+3) The final password will be displayed for your use.
+
+Troubleshooting:
+![Error message prompt from incorrect user entry in the generator prompt](Develop/Assets/error.png)
+If characters other than requested is entered in the prompt (or left empty), or if no characters are selected in the follow-up prompts, the generator will return an error.
+
+Please click on the 'generate' button to try again.
 
 ## Credits
 

@@ -6,17 +6,6 @@
 
 // Get references to the #generate & #password element
 var generateBtn = document.querySelector("#generate");
-var passwordText = document.querySelector("#password");
-
-// variables
-
-let includeLowerCase;
-let includeUpperCase;
-let includeNumbers;
-let includeSymbols;
-
-let generatedPassword = "";
-
 
 // character types (converted into arrays using 'split' function)
 
@@ -30,68 +19,66 @@ const upperCase = upperCaseChar.split('');
 const numbers = numberChar.split('');
 const special = specialChar.split('');
 
-
-// functions for randomising characters based on the chosen password length in the previous prompt
-function getRandomLower() {
-  return lowerCase[Math.floor(Math.random() * lowerCase.length)];
-}
-
-function getRandomUpper() {
-  return upperCase[Math.floor(Math.random() * upperCase.length)];
-}
-
-function getRandomNumber() {
-  return numbers[Math.floor(Math.random() * number.length)];
-}
-
-function getRandomSymbol() {
-  return symbols[Math.floor(Math.random() * symbols.length)];
-}
-
 // password generation
 
 function generatePassword() {
   // Ask user for their choice
   var userLength = window.prompt("Select your password length (by entering a number between 8-128 characters)");
 
-  // // If user pressed Cancel or entered non-numerical characters, end function
-  if (userLength < 8 || userLength > 128 || isNaN || !userLength) {
-    alert("Please enter numerical character(s) only & ensure it is within 8-168 characters.");
+  // If user pressed Cancel or entered non-numerical characters, end function
+  if (userLength < 8 || userLength > 128 || !userLength) {
+    alert("Please ensure your chosen length within 8-168 characters - click on the button again to restart.");
     return;
   };
-  
-}
-    // WIP
 
-  //   for (i = 0, i <= userLength; i++;) {
+  if (isNaN(userLength)) {
+    alert("Please enter a numerical character - click on the button again to restart.");
+    return;
+  }
 
-  //   let userLowerCase = window.confirm("Would you like to include lower case characters?");
-  //   if (userLowerCase === true) {
-  //     generatedPassword += getRandomLower();
-  //   }
-  
-  //     let userUpperCase = window.confirm("Would you like to include upper case characters?");
-  //   if (userUpperCase === true) {
-  //     generatedPassword += getRandomUpper();
-  //   }
+  // console log for debugging
+  console.log("User's chosen password length = " + userLength);
 
-  // let userNumbers = window.confirm("Would you like to include numerical characters?");
-  // if (userNumbers === true) {
-  //   generatedPassword += getRandomNumber();
-  // }
+  // Series of confirm (ok/cancel) prompts to gather user choices
+  let userLowerCase = window.confirm("Would you like to include lower case characters?");
+  let userUpperCase = window.confirm("Would you like to include upper case characters?");
+  let userNumbers = window.confirm("Would you like to include numerical characters?");
+  let userSpecial = window.confirm("Would you like to include special characters? (e.g. !@#$%)");
 
-  // let userSpecial = window.confirm("Would you like to include special characters? (e.g. !@#$%)");
-  // if (userSpecial === true) {
-  //  generatedPassword += getRandomSymbol();
-  // }
+  // through concatonation, add selected character options from above into the empty password array.
+  // option logged into console when selected (for debugging)
+  let userChoice = [];
 
-  // }
-// };
+  if (userLowerCase) {
+    userChoice = userChoice.concat(lowerCase);
+    console.log("lowercase selected");
+  }
+  if (userUpperCase) {
+    userChoice = userChoice.concat(upperCase);
+    console.log("uppercase selected");
+  }
+  if (userNumbers) {
+    userChoice = userChoice.concat(numbers);
+    console.log("numbers selected");
+  }
+  if (userSpecial) {
+    userChoice = userChoice.concat(special);
+    console.log("special characters selected");
+  }
+
+
+  // use for loop to randomise a password, using the array generated above
+  for (let i = 0; i < userLength; i++) {
+    const userChoiceRandom = userChoice[Math.floor(Math.random() * userLength.length)];
+    console.log(userChoiceRandom);
+  }
+
+};
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-
+  var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 

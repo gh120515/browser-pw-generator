@@ -1,9 +1,5 @@
 // Assignment code here
 
-// TODO:
-// concatonation
-// validation - to see if all the requests user checked is included
-
 // Get references to the #generate & #password element
 var generateBtn = document.querySelector("#generate");
 
@@ -19,7 +15,8 @@ const upperCase = upperCaseChar.split('');
 const numbers = numberChar.split('');
 const special = specialChar.split('');
 
-// password generation
+
+// password generation using provided function
 
 function generatePassword() {
   // Ask user for their choice
@@ -47,7 +44,7 @@ function generatePassword() {
 
   // through concatonation, add selected character options from above into the empty password array.
   // option logged into console when selected (for debugging)
-  let userChoice = [];
+  var userChoice = [];
 
   if (userLowerCase) {
     userChoice = userChoice.concat(lowerCase);
@@ -66,12 +63,25 @@ function generatePassword() {
     console.log("special characters selected");
   }
 
-
   // use for loop to randomise a password, using the array generated above
+    // New variable (string) for temporary storage of randomly generated password
+  let userChoiceRandom = "";
+
   for (let i = 0; i < userLength; i++) {
-    const userChoiceRandom = userChoice[Math.floor(Math.random() * userLength.length)];
-    console.log(userChoiceRandom);
+    userChoiceRandom += userChoice[Math.floor(Math.random() * userChoice.length)];
   }
+
+  // validation check to see if all selected characters have been included
+
+  while(userChoiceRandom){
+    if (userLowerCase){}
+    if (userUpperCase){}
+    if (userNumbers){}
+    if(userSpecial){}
+
+  }
+
+  return userChoiceRandom;
 
 };
 

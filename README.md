@@ -27,6 +27,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 Codes provided in the University of Adelaide Full-Stack Development bootcamp (course ID: UADEL-VIRT-FSF-PT-03-2023-U-LOLC-MTTH) was used as initial references & starting point in building the initial codes.
 
 Additional code & general references include the following:
+- 'Build a Password Generator With JavaScript - Tutorial' by Web Dev Simplified: <https://www.youtube.com/watch?v=iKo9pDKKHnc>;
 - 'Random Password Generator using Javascript' by Foolish Developer: <https://dev.to/code_mystery/random-password-generator-using-javascript-6a>
 - 'Var, Let, and Const – What's the Difference?' by freeCodeCamp: <https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/>
 - 'Window confirm()' by W3 Schools: <https://www.w3schools.com/jsref/met_win_confirm.asp>

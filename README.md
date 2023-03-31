@@ -14,14 +14,17 @@ This project was also for my personal learning to consolidate my knowledge on ba
 
 ## Usage
 
-![Screenshot of the generator in use](Develop/Assets/landing.png)
+Link to the deployed website: https://gh120515.github.io/browser-pw-generator
+
+![Screenshot of the generator in use](./assets/images/landing.png)
 
 The screenshot above demonstrates the generator in use.
 
 How to use:
+
 Click on the 'generate' button to initiate the password generation process.
 
-![Prompt for user entry in the generator](Develop/Assets/entry.png)
+![Prompt for user entry in the generator](./assets/images/entry.png)
 
 Please enter the required information as requested by the prompt in the entry field.
 1) Enter the length of password desired between 8 to 128 characters (in numbers)
@@ -29,7 +32,8 @@ Please enter the required information as requested by the prompt in the entry fi
 3) The final password will be displayed for your use.
 
 Troubleshooting:
-![Error message prompt from incorrect user entry in the generator prompt](Develop/Assets/error.png)
+
+![Error message prompt from incorrect user entry in the generator prompt](./assets/images/error.png)
 
 If characters other than requested is entered in the prompt (or left empty), or if no characters are selected in the follow-up prompts, the generator will return an error.
 
